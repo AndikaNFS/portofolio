@@ -167,7 +167,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2">
             <label
               htmlFor="message"
               className="block text-sm font-semibold leading-6 text-gray-900"
@@ -183,7 +183,7 @@ function Contact() {
                 defaultValue={""}
               />
             </div>
-          </div>
+          </div> */}
           {/* <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
             <div className="flex h-6 items-center">
               <Switch
