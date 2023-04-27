@@ -3,10 +3,10 @@ import React from "react";
 function HeroSection() {
   return (
     <>
-      <div className="static bg-white">
+      <div className="static bg-white" id="home">
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
           <div class="relative h-0 w-0 z-40">
-            <div class="absolute h-20 w-14 -left-10 -bottom-12  ">
+            <div class="absolute h-20 w-14 -left-10 -bottom-12">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ function HeroSection() {
                   Get started
                 </a> */}
                 <a
-                  href="#"
+                  href="#about"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span aria-hidden="true">→</span>
