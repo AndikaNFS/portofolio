@@ -7,6 +7,8 @@ import React from "react";
 //   Typography,
 // } from "@mui/material";
 
+import "../../assets/css/skills.css";
+
 const experiences = [
   {
     period: "Nov 2021 - Feb 2022",
@@ -124,7 +126,7 @@ function Skills() {
             </Card> */}
             {/* </div> */}
             <div className="card rounded-xl mt-8 bg-indigo-200/10 mx-auto max-w-3xl lg:mx-0">
-              <div className="grid grid-cols-2">
+              <div className="skill grid grid-cols-2">
                 {skills.map((skill) => (
                   <div
                     key={skill.name}
@@ -133,11 +135,13 @@ function Skills() {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox={skill.viewbox}
-                      className="w-32 h-12 "
+                      className="icon w-32 h-12"
                     >
                       <path d={skill.path} />
                     </svg>
-                    <div className="text-3xl text-gray-200">{skill.name}</div>
+                    <div className="name text-3xl text-gray-200 mobile:text-xl">
+                      {skill.name}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -157,19 +161,19 @@ function Skills() {
                 key={experience.period}
                 className="grid grid-cols-2 px-6 mt-6"
               >
-                <span className="text-lg text-indigo-300">
+                <span className="text-lg text-indigo-300  w-full">
                   {experience.period}
                 </span>
-                <span className="text-lg text-indigo-500">
+                <div className="text-lg text-indigo-500 ">
                   <span className="underline underline-offset-2">
                     {experience.company}
                   </span>
                   <p>{experience.division}</p>
-                  <ul className="list-disc text-gray-400 text-base px-5">
+                  <ul className="list-inside list-disc text-gray-400 text-base px-0 ">
                     <li>{experience.job1}</li>
                     <li>{experience.job2}</li>
                   </ul>
-                </span>
+                </div>
               </div>
             ))}
           </div>

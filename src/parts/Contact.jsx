@@ -4,6 +4,7 @@ import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // import "../helpers/format/email";
+import "../assets/css/contact.css";
 
 function Contact() {
   // const [agreed, setAgreed] = useState(false);
@@ -154,7 +155,7 @@ function Contact() {
                 /> */}
               </div>
               <input
-                type="tel"
+                type="number"
                 name="phone-number"
                 id="phone-number"
                 value={inputPhone}

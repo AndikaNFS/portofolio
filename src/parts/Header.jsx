@@ -130,6 +130,7 @@ function Header() {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
+
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
