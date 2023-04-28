@@ -13,8 +13,9 @@ const features = [
     icon: ShoppingBagIcon,
   },
   {
-    name: "Mockup Website Eduinsyariah",
+    name: "Mockup Website EduInsSyariah",
     image: "./assets/images/ProjectDesainWebsite.png",
+    href: "https://xd.adobe.com/view/64d6f784-cab6-4c9b-544e-0bee813760f6-12e7/",
     icon: AcademicCapIcon,
   },
 ];
@@ -65,7 +66,9 @@ function Features() {
                     {feature.name}
                   </dt>
                   <dd className="mt-2 text-base leading-7 text-gray-600">
-                    <img src={feature.image} />
+                    <a href={feature.href}>
+                      <img src={feature.image} />
+                    </a>
                   </dd>
                 </div>
               ))}
