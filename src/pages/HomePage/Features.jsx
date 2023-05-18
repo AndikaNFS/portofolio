@@ -1,15 +1,19 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+
+import { Dialog, RadioGroup, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
   FingerPrintIcon,
   ShoppingBagIcon,
   AcademicCapIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
   {
     name: "E-Commerce Vegetable Vendor",
     image: "./assets/images/ProjectWebsite.png",
+    href: "https://vegevendor.000webhostapp.com/",
     icon: ShoppingBagIcon,
   },
   {
@@ -18,11 +22,18 @@ const features = [
     href: "https://xd.adobe.com/view/64d6f784-cab6-4c9b-544e-0bee813760f6-12e7/",
     icon: AcademicCapIcon,
   },
+  {
+    name: "Luxspace",
+    image: "./assets/images/Luxspace.png",
+    href: "https://luxspace-rfd-xlwz.vercel.app/",
+    icon: ShoppingBagIcon,
+  },
 ];
 
 const menus = [
   { name: "UI/UX", href: "#", id: "UI/UX" },
-  { name: "Website", href: "#", id: "Website" },
+  { name: "Laravel", href: "#", id: "Laravel" },
+  { name: "ReactJS", href: "#", id: "ReactJS" },
 ];
 
 function Features() {
@@ -44,7 +55,7 @@ function Features() {
                     key={menu.name}
                     href={menu.href}
                     id={menu.id}
-                    className="text-lg font-semibold leading-5 text-gray-500 gap-5 hover:text-indigo-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+                    className="text-lg font-semibold leading-5 text-gray-500 gap-5 hover:text-indigo-500 focus:outline-none "
                   >
                     {menu.name}
                   </a>
@@ -53,10 +64,10 @@ function Features() {
             </div>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                  <div className="text-base font-semibold leading-7 text-gray-900">
                     <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
                       <feature.icon
                         className="h-6 w-6 text-white"
@@ -64,15 +75,15 @@ function Features() {
                       />
                     </div>
                     {feature.name}
-                  </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
+                  </div>
+                  <div className="mt-2 text-base leading-7 text-gray-600">
                     <a href={feature.href}>
                       <img src={feature.image} />
                     </a>
-                  </dd>
+                  </div>
                 </div>
               ))}
-            </dl>
+            </div>
           </div>
         </div>
       </div>
