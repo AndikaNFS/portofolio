@@ -93,7 +93,7 @@ function Features() {
                     {feature.name}
                   </div>
                   <div className="mt-2 text-base leading-7 text-gray-600">
-                    <a href={feature.href}>
+                    <a href={feature.href} target="_blank">
                       <img src={feature.image} className="rounded-xl" />
                     </a>
                   </div>

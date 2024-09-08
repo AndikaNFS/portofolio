@@ -9,7 +9,7 @@ import React from "react";
 
 import "../../assets/css/skills.css";
 
-const experiences = [
+const experiences1 = [
   {
     period: "Nov 2021 - Feb 2022",
     company: "PT. Hutama Karya (Persero)",
@@ -18,6 +18,18 @@ const experiences = [
     job2: "Maintainig internet network and fixing router that doesn’t connect the internet. te a CRUD dashboard using Laravel Framework and PostgreSQL Database",
   },
 ];
+
+const experiences2 = [
+  {
+    period: "Jul 2023 - Present",
+    company: "PT. Pharos Indonesia",
+    division: "Technical Support",
+    job1: "Maintenance Computer (Hardware and Software)",
+    job2: "Maintenance UPS",
+    job3: "Installation CCTV",
+    job4: "Solve Computer Problems Remotely",
+  }
+]
 
 const skills = [
   {
@@ -106,8 +118,8 @@ function Skills() {
           <h2 className="text-4xl font-bold text-center tracking-tight text-white sm:text-6xl mb-5">
             Skills & Experience
           </h2>
-          <div className="skills grid grid-cols-2">
-            <div className="card rounded-xl mt-8 bg-indigo-200/10 mx-auto max-w-3xl lg:mx-0">
+          <div className="skills grid grid-rows-1 grid-flow-col gap-2">
+            <div className="row-span-3 card rounded-xl mt-8 bg-indigo-200/10 mx-auto max-w-3xl lg:mx-0">
               <div className="skill grid grid-cols-2">
                 {skills.map((skill) => (
                   <div
@@ -139,7 +151,7 @@ function Skills() {
                 <div className="text-3xl text-blue-400">Boostrap</div>
               </div> */}
             </div>
-            {experiences.map((experience) => (
+            {experiences1.map((experience) => (
               <div
                 key={experience.period}
                 className="grid grid-cols-2 px-6 mt-6"
@@ -155,6 +167,29 @@ function Skills() {
                   <ul className="list-inside list-disc text-gray-400 text-base px-0 ">
                     <li>{experience.job1}</li>
                     <li>{experience.job2}</li>
+                  </ul>
+                </div>
+              </div>
+            ))}
+
+            {experiences2.map((experience) => (
+              <div
+                key={experience.period}
+                className="grid grid-cols-2 px-6 mt-6"
+              >
+                <span className="text-lg text-indigo-300  w-full">
+                  {experience.period}
+                </span>
+                <div className="text-lg text-indigo-500 ">
+                  <span className="underline underline-offset-2">
+                    {experience.company}
+                  </span>
+                  <p>{experience.division}</p>
+                  <ul className="list-inside list-disc text-gray-400 text-base px-0 ">
+                    <li>{experience.job1}</li>
+                    <li>{experience.job2}</li>
+                    <li>{experience.job3}</li>
+                    <li>{experience.job4}</li>
                   </ul>
                 </div>
               </div>

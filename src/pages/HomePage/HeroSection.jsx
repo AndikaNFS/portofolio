@@ -50,7 +50,7 @@ function HeroSection() {
                 <br />
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                Front-End Web Developer.
+                Front-End Web Developer and Technical Support
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 {/* <a
