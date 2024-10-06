@@ -118,28 +118,32 @@ function Skills() {
           <h2 className="text-4xl font-bold text-center tracking-tight text-white sm:text-6xl mb-5">
             Skills & Experience
           </h2>
-          <div className="skills grid grid-rows-1 grid-flow-col gap-2">
-            <div className="row-span-3 card rounded-xl mt-8 bg-indigo-200/10 mx-auto max-w-3xl lg:mx-0">
-              <div className="skill grid grid-cols-2">
-                {skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center justify-start mt-6 text-lg leading-8 text-gray-300"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox={skill.viewbox}
-                      className="icon w-32 h-12"
-                    >
-                      <path d={skill.path} />
-                    </svg>
+          <div className="skills grid">
+            <div className="flex justify-center">
+              <div className="row-span-3 content card rounded-xl mt-8 w-9/12 bg-indigo-200/10 mx-auto max-w-3xl lg:mx-0">
+                <div className="container flex justify-center">
+                  <div className="skill grid grid-cols-2 gap-3 justift-center">
+                    {skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex items-center justify-start mt-6 text-lg leading-8 text-gray-300"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox={skill.viewbox}
+                          className="icon w-32 h-12"
+                        >
+                          <path d={skill.path} />
+                        </svg>
 
-                    <div className="name text-3xl text-gray-200 mobile:text-xl">
-                      {skill.name}
-                    </div>
+                        <div className="name text-3xl text-gray-200 mobile:text-xl">
+                          {skill.name}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+
+                </div>
               {/* <div className="flex items-center justify-start mt-6 text-lg leading-8 text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,10 +155,12 @@ function Skills() {
                 <div className="text-3xl text-blue-400">Boostrap</div>
               </div> */}
             </div>
+
+            </div>
             {experiences1.map((experience) => (
               <div
                 key={experience.period}
-                className="grid grid-cols-2 px-6 mt-6"
+                className="grid grid-cols-2 px-6 mt-8 pt-4"
               >
                 <span className="text-lg text-indigo-300  w-full">
                   {experience.period}
