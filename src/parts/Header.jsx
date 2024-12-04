@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Dialog } from "@headlessui/react";
+import { Dialog, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import {
   Bars3Icon,
   XMarkIcon,
   CloudArrowUpIcon,
-  IdentificationIcon,
+  ChevronDownIcon,
+  IdentificationIcon
 } from "@heroicons/react/24/outline";
 
 // import pdf from "../assets/CV_ATS_AndikaNurSasmito.pdf";
@@ -36,13 +37,15 @@ function Header() {
     <>
       {/* <div className="bg-white"> */}
       <header className="fixed inset-x-0 top-0 z-40">
+
+        
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only text-gray-600">Your Company</span>
+              <span className="sr-only text-gray-600"></span>
               <a href="" className="bg-indigo-500 w-40 h-30">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +63,86 @@ function Header() {
               </a>
             </a>
           </div>
+
+          <Menu as="div" className="relative inline-block text-left">
+      {/* <div>
+        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          Options
+          <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
+        </MenuButton>
+      </div> */}
+
+      <MenuItems
+        transition
+        className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+      >
+        <div className="py-1">
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Edit
+            </a>
+          </MenuItem>
+          {/* <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Duplicate
+            </a>
+          </MenuItem>
+        </div>
+        <div className="py-1">
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Archive
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Move
+            </a>
+          </MenuItem>
+        </div>
+        <div className="py-1">
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Share
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Add to favorites
+            </a>
+          </MenuItem>
+        </div>
+        <div className="py-1">
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Delete
+            </a>
+          </MenuItem> */}
+        </div>
+      </MenuItems>
+    </Menu>
+
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -70,7 +153,7 @@ function Header() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-12 scroll-smooth">
             {navigation.map((item) => (
               <a
                 key={item.name}
